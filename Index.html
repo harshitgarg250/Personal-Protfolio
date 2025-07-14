@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <style>
+   
+    html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      /* background: #081b29; */
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      /* background: #05141f; */
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      color: #0ef;
+      font-weight: 700;
+    }
+
+    .navbar {
+      display: flex;
+      /* gap: 1rem; */
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #0ef;
+    }
+
+    @media (max-width: 1024px) {
+      .home,
+      .about,
+      .services,
+      .projects-section,
+      .contact {
+        flex-direction: column;
+        padding: 3rem;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+      }
+
+      .home-content h1,
+      .sub-title,
+      .about-text h2,
+      .contact-text h2 {
+        font-size: 2rem;
+      }
+
+      .home-img img,
+      .about-img img {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      .radial-bars {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .radial-bar {
+        width: 90%;
+        margin: 1rem auto;
+      }
+
+      .services-list,
+      .projects-grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .home-content h1 {
+        font-size: 2rem;
+      }
+
+      .home-content h3,
+      .about-text h2,
+      .sub-title {
+        font-size: 1.25rem;
+      }
+
+      .btn,
+      .read,
+      .project-link,
+      .contact-form form .send {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .contact-form form input,
+      .contact-form form textarea {
+        width: 100%;
+      }
+
+      .top {
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .top i {
+        font-size: 1rem;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2 class="logo">Portfolio.</h2>
+    <nav class="navbar">
+      <a href="#home" style="--i:1" class="active">Home</a>
+      <a href="#about" style="--i:2">About</a>
+      <a href="#services" style="--i:3">Services</a>
+      <a href="#skills" style="--i:4">Skills</a>
+      <a href="#projects" style="--i:5">Project</a>
+      <a href="#contact" style="--i:6">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Harshit Garg</h1>
+      <h3>And I'm a <span class="text"></span></h3>
+      <p class="home-text">
+        I am a B.Tech student specializing in front-end development, with expertise in HTML, CSS, Bootstrap, JavaScript, React, and Node.js. I have experience working with modern frameworks to build responsive and interactive web applications. Additionally, I have hands-on practice in Data Structures and Algorithms using C++, which has strengthened my problem-solving skills. I am passionate about creating efficient, scalable, and user-friendly applications that deliver a great user experience.
+      </p>
+
+      <div class="social-media">
+        <a href="https://wa.me/+917819072664"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://mail.google.com"><i class="bx bxl-gmail"></i></a>
+        <a href="https://www.linkedin.com"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/"><i class="bx bxl-github"></i></a>
+      </div>
+
+      <a href="about.html" class="btn">More About Me</a>
+    </div>
+
+    <div class="home-img">
+      <img src="ProfilePhoto.png" alt="Profile Photo" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="second.jpg" alt="Profile Photo" />
+    </div>
+    <div class="about-text">
+      <h2>About <span>Me</span></h2>
+      <h4>MERN Stack Developer</h4>
+      <p>
+        I am a B.Tech student specializing in front-end development, with expertise in HTML, CSS, Bootstrap, JavaScript, React, and Node.js. I have experience working with modern frameworks to build responsive and interactive web applications. Additionally, I have hands-on practice in Data Structures and Algorithms using C++, which has strengthened my problem-solving skills. I am passionate about creating efficient, scalable, and user-friendly applications that deliver a great user experience.
+      </p>
+      <a href="about.html" class="btn">More About Me</a>
+    </div>
+  </section>
+  <!-- services --> 
+  <section>
+    <div class="services" id="services">
+      <div class="container">
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code" style="color: #00d8f5"></i>
+            <h2>UX/UI Designs</h2>
+            <p>
+              I design clean and modern user interfaces that are easy to understand and use.
+              My focus is on creating layouts that are responsive, accessible, and visually balanced.
+              I believe good design should guide users naturally without needing extra instructions.
+              From wireframes to final visuals, I aim to improve the overall experience with every detail.
+            </p>
+            <a href="uiux.html" class="read">lern more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-apple" style="color: #00c8f0"></i>
+            <h2>Web development</h2>
+            <p>
+              I build fully responsive and interactive websites using HTML, CSS, JavaScript, and frameworks like React.
+              My goal is to create smooth user experiences that work across all screen sizes and devices.
+              I focus on writing clean, reusable code that makes websites fast and easy to maintain.
+              Every project I build is aimed at solving real problems in a user-friendly way.
+            </p>
+            <a href="webdeve.html" class="read">lern more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code" style="color: #00d8f5"></i>
+            <h2>Python development</h2>
+            <p>
+              I use Python for a wide range of tasks like scripting, backend development, and automation.
+              Its clear syntax allows me to write efficient and readable code for solving problems quickly.
+              I’ve worked with Python for tasks like data processing, API handling, and algorithm practice.
+              It's my go-to language for learning new concepts and building smart solutions.
+            </p>
+            <a href="python.html" class="read">lern more</a>
+          </div>
+          <!-- <div>
+            <i class="fa-brands fa-apple" style="color: #00c8f0"></i>
+            <h2></h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate aliquid quam, voluptatum qui numquam voluptatibus
+              provident iure. Eius dignissimos, deserunt nobis aut eum itaque
+              cum et, assumenda, hic doloribus optio.
+            </p>
+            <a href="#" class="read">lern more</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- skills -->
+  <div class="sub-title">My <span>Skills</span></div>
+  <section>
+    <div class="container" id="skills">
+      <h1 class="heading1">Technical Skills</h1>
+      <div class="technical-bars">
+        <div class="bar">
+          <i class="fa-brands fa-html5" style="color: #c95d2e"></i>
+          <div class="info">
+            <span>HTML</span>
+          </div>
+          <div class="progress-line html">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <i class="fa-brands fa-css" style="color: #147bbc"></i>
+          <div class="info">
+            <span>CSS</span>
+          </div>
+          <div class="progress-line css">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <i class="fa-brands fa-js" style="color: #b0bc1e"></i>
+          <div class="info">
+            <span>Java Script</span>
+          </div>
+          <div class="progress-line js">
+            <span></span>
+          </div>
+        </div>
+
+        <div class="bar">
+          <i class="fa-brands fa-react" style="color: #1746d3"></i>
+          <div class="info">
+            <span>Recat</span>
+          </div>
+          <div class="progress-line react">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <i class="fa-brands fa-python" style="color: #69bcbc"></i>
+          <div class="info">
+            <span>Python</span>
+          </div>
+          <div class="progress-line python">
+            <span></span>
+          </div>
+        </div>
+        <div class="bar">
+          <i class="fa-brands fa-database" style="color: #c32ec9"></i>
+          <div class="info">
+            <span>SQL</span>
+          </div>
+          <div class="progress-line sql">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container1">
+      <h1 class="heading1">Professional Skills</h1>
+      <div class="radial-bars">
+        <div class="radial-bar">
+          <svg x="0px" y="0px" viewBox="0 0 200 300">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+          </svg>
+
+          <div class="percentage">95%</div>
+          <div class="text">Creativity</div>
+        </div>
+        <div class="radial-bar">
+          <svg x="0px" y="0px" viewBox="0 0 200 300">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">80%</div>
+          <div class="text">Teamwork</div>
+        </div>
+        <div class="radial-bar">
+          <svg x="0px" y="0px" viewBox="0 0 200 300">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">75%</div>
+          <div class="text">Communication</div>
+        </div>
+        <div class="radial-bar">
+          <svg x="0px" y="0px" viewBox="0 0 200 300">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">85%</div>
+          <div class="text">Problem-Solving</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Updated Project and Content Section in HTML -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="portfolio.png" alt="Project 1" />
+          <div class="project-info">
+            <h3>Personal Portfolio</h3>
+            <p>
+              A real-time weather application using HTML, CSS, and JavaScript
+              with API integration to fetch live data.
+            </p>
+            <a href="firstproject.html" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="genderage.png" alt="Project 2" />
+          <div class="project-info">
+            <h3>Gender And Age Detection System</h3>
+            <p>
+              A responsive to-do list web app built using JavaScript that
+              allows task management with local storage.
+            </p>
+            <a href="harshitgarg250/Gender-Age-detection-mini-project-" class="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="currency.png" alt="Project 3" />
+          <div class="project-info">
+            <h3>Currency Convertor</h3>
+            <p>
+              Personal portfolio website built using HTML, CSS, JavaScript,
+              and animations with Typed.js and Boxicons.
+            </p>
+            <a href="#" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section in HTML -->
+
+  <section id="contact" class="contact">
+    <div class="contact-text">
+      <h2 class="section-title">Contact <span>Me</span></h2>
+      <h4>Let's work Togather</h4>
+      <p>I appreciate you taking the time to visit my portfolio. Looking forward to connecting with you!
+
+      </p>
+      <div class="contact-list">
+        <li><i class="bx bxs-send"></i>harshitgarg674@gmail.com</li>
+        <li><i class="bx bxs-phone"></i>+917819072664</li>
+      </div>
+      <div class="contact-icons">
+        <a href="https://wa.me/+917819072664"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://mail.google.com"><i class="bx bxl-gmail"></i></a>
+        <a href="https://www.linkedin.com"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/"><i class="bx bxl-github"></i></a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form action="">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="" placeholder="Enter Your Subject" required>
+        <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+        <input type="submit" value="submit" class="send">
+      </form>
+    </div>
+    </div>
+  </section>
+  <div class="last-text">
+    <p>Developed with love by Harshit Garg © 2025</p>
+  </div>
+  I
+  <a href="#" class="top"><i class='bx bx-up-arrow-alt'></¡></a>
+
+  <script src="Script.js"></script>
+</body>
+
+</html>
